@@ -8,33 +8,37 @@
     
     <style>
         body {
-            background-color: white;
+            background-color: #ffffff;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
             margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
             color: #333;
         }
         h1 {
-            font-weight: 300;
-            letter-spacing: 8px;
-            margin-bottom: 10px;
+            /* 調整為與進入後一致的藍色與字體粗細 */
+            color: #0056b3; 
+            font-weight: bold;
+            letter-spacing: 5px;
+            margin-bottom: 15px;
+            font-size: 2.5em;
         }
         p {
-            color: #888;
-            font-size: 0.9em;
+            color: #666;
+            font-size: 1em;
+            letter-spacing: 1px;
         }
         .loader {
-            border: 2px solid #f3f3f3;
-            border-top: 2px solid #3498db;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #0056b3; /* 圓圈也同步改為深藍色 */
             border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            animation: spin 2s linear infinite;
-            margin-top: 20px;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin-top: 30px;
         }
         @keyframes spin {
             0% { transform: rotate(0deg); }
@@ -43,22 +47,21 @@
     </style>
 
     <script>
-        // 指向你家 4060 的 Ngrok 網址
         var targetUrl = "https://dynastic-antone-synclinal.ngrok-free.dev";
         
-        // 延遲 1.5 秒跳轉，確保 Google 爬蟲有時間讀取到驗證碼
+        // 稍微縮短載入感，1秒後即跳轉
         setTimeout(function() {
             window.location.replace(targetUrl);
-        }, 1500);
+        }, 1000);
     </script>
 </head>
 <body>
     <h1>太 空 A I</h1>
-    <p>正在連線至 yangyanmao0707 的本地 12B 運算核心...</p>
+    <p>正在初始化 12B 運算核心...</p>
     <div class="loader"></div>
     
     <noscript>
-        <p>您的瀏覽器不支援 Javascript，請 <a href="https://dynastic-antone-synclinal.ngrok-free.dev">手動點擊此處進入</a></p>
+        <p>您的瀏覽器不支援 Javascript，請 <a href="https://dynastic-antone-synclinal.ngrok-free.dev">點擊此處進入</a></p>
     </noscript>
 </body>
 </html>
